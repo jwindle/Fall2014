@@ -65,7 +65,7 @@ for (j in 1:m) {
 ## Plot the truth and plot the approximation --- DON'T WORRY ABOUT THE DETAILS HERE.
 plot(0:10, probs, type="h", ylim=c(0, 0.4), main="Exact and approximate distribution of test statistic", xlab="k")
 points(0:10, probs, pch=19)
-h = hist(samp, breaks=seq(-0.5,10.5,by=1), plot=FALSE)
+h = hist(T, breaks=seq(-0.5,10.5,by=1), plot=FALSE)
 lines(0:10+0.1, h$density, col=4, typ="h")
 points(0:10+0.1, h$density, pch=19, col=4)
 legend("topright", legend=c("Exact", "Using sample"), pch=c(19,19), col=c(1,4))
