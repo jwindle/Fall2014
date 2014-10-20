@@ -85,7 +85,7 @@ n2 = 6                    # The number of subjects in group 2.
 n =n1+n2                  # The total number of subjects.
 
 ## randomly assign gropus
-grp.1 = sample(1:n, size=n1, replace=TRUE)
+grp.1 = sample(1:n, size=n1, replace=FALSE)
 grp.2 = (1:n)[-grp.1]
 
 x1 = random.process.A(n1)  # random.process.A is not a built-in R command.
@@ -116,7 +116,7 @@ for (j in 1:m) {
     if (j %% 50 == 0) cat("j =", j, "\n") 
 
     ## randomly assign gropus
-    grp.1 = sample(1:n, size=n1, replace=TRUE)
+    grp.1 = sample(1:n, size=n1, replace=FALSE)
     grp.2 = (1:n)[-grp.1]
 
     ## generate data from same random process
